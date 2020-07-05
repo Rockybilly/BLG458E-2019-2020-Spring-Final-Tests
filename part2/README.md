@@ -1,0 +1,1 @@
+# This tests assume the cards inserted are drawn in a First in First out manner.

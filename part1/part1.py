@@ -63,7 +63,7 @@ def sundays3(start, end):
     n = 0
     start_date = datetime.datetime(year=start, month=1, day=1)
     end_date = datetime.datetime(year=end, month=12, day=1)
-    delta = datetime.timedelta(days=1)
+    delta = datetime.timedelta(month=1)
 
     while start_date <= end_date:
         weekday = start_date.weekday()
