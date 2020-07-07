@@ -1,0 +1,95 @@
+- init:
+    run: rm -f part3 part3.o part3.hi
+    visible: false
+- compile:
+    run: ghc part3.hs -o part3
+    blocker: true
+- case_1:
+    run: ./part3 "i love you"
+    script:
+      - expect: "io lev you"
+      - expect: "io you lev"
+      - expect: "lev io you"
+      - expect: "lev you io"
+      - expect: "olive you"
+      - expect: "you io lev"
+      - expect: "you lev io"
+      - expect: "you olive"
+      - expect: _EOF_
+- case_2:
+    run: ./part3 "ce rulez"
+    script:
+      - expect: "cruz eel"
+      - expect: "cruz lee"
+      - expect: "eel cruz"
+      - expect: "lee cruz"
+      - expect: _EOF_
+- case_3:
+    run: ./part3 "turgut uyar"
+    script:
+      - expect: "guru tau try"
+      - expect: "guru try tau"
+      - expect: "tau guru try"
+      - expect: "tau try guru"
+      - expect: "try guru tau"
+      - expect: "try tau guru"
+      - expect: _EOF_
+- case_4:
+    run: ./part3 "ubuntu"
+    script:
+      - expect: "There are no anagrams."
+      - expect: _EOF_
+- case_5:
+    run: ./part3 "zzzz"
+    script:
+      - expect: "There are no anagrams."
+      - expect: _EOF_
+- case_6:
+    run: ./part3 "hayat zor"
+    script:
+      - expect: "ah oz tray"
+      - expect: "ah tray oz"
+      - expect: "art hay oz"
+      - expect: "art oz hay"
+      - expect: "at hazy or"
+      - expect: "at or hazy"
+      - expect: "ha oz tray"
+      - expect: "ha tray oz"
+      - expect: "hat oz ray"
+      - expect: "hat ray oz"
+      - expect: "hay art oz"
+      - expect: "hay oz art"
+      - expect: "hay oz rat"
+      - expect: "hay oz tar"
+      - expect: "hay rat oz"
+      - expect: "hay tar oz"
+      - expect: "hazy at or"
+      - expect: "hazy or at"
+      - expect: "or at hazy"
+      - expect: "or hazy at"
+      - expect: "oz ah tray"
+      - expect: "oz art hay"
+      - expect: "oz ha tray"
+      - expect: "oz hat ray"
+      - expect: "oz hay art"
+      - expect: "oz hay rat"
+      - expect: "oz hay tar"
+      - expect: "oz rat hay"
+      - expect: "oz ray hat"
+      - expect: "oz tar hay"
+      - expect: "oz tray ah"
+      - expect: "oz tray ha"
+      - expect: "rat hay oz"
+      - expect: "rat oz hay"
+      - expect: "ray hat oz"
+      - expect: "ray oz hat"
+      - expect: "tar hay oz"
+      - expect: "tar oz hay"
+      - expect: "tray ah oz"
+      - expect: "tray ha oz"
+      - expect: "tray oz ah"
+      - expect: "tray oz ha"
+      - expect: _EOF_
+- cleanup:
+    run: rm -f part3 part3.o part3.hi
+    visible: false
