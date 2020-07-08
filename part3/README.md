@@ -19,6 +19,6 @@ or
 
 Both should work (take note that outputs are sorted in lexicographic order).
 
-If the result list is empty (no anagrams), this whould be printed instead.
+If the result list is empty (no anagrams), this should be printed instead.
 
 `"There are no anagrams."`
