@@ -4,7 +4,7 @@
 - compile:
     run: ghc part2.hs -o part2
     blocker: true
-- case_1:
+- case_150150151_1:
     run: ./part2
     script:
       - expect: "Enter cards:"
@@ -18,7 +18,7 @@
       - send: "25"
       - expect: "Score: 7"
       - expect: _EOF_
-- case_2:
+- case_150150151_2:
     run: ./part2
     script:
       - expect: "Enter cards:"
@@ -40,7 +40,7 @@
       - expect: "part2: card not in list"
       - expect: _EOF_
     exit: 1
-- case_3:
+- case_150150151_3:
     run: ./part2
     script:
       - expect: "Enter cards:"
@@ -66,9 +66,9 @@
       - send: "."
       - expect: "Enter goal:"
       - send: "28"
-      - expect: "Score: 33"
+      - expect: "Score: 18"
       - expect: _EOF_
-- case_4:
+- case_150150151_4:
     run: ./part2
     script:
       - expect: "Enter cards:"
@@ -90,9 +90,9 @@
       - send: "."
       - expect: "Enter goal:"
       - send: "11"
-      - expect: "Score: 21"
+      - expect: "Score: 1"
       - expect: _EOF_
-- case_5:
+- case_150150151_5:
     run: ./part2
     script:
       - expect: "Enter cards:"
@@ -110,7 +110,7 @@
       - send: "11"
       - expect: "Score: 4"
       - expect: _EOF_
-- case_6:
+- case_150150151_6:
     run: ./part2
     script:
       - expect: "Enter cards:"
@@ -131,7 +131,7 @@
       - send: "36"
       - expect: "Score: 11"
       - expect: _EOF_
-- case_7:
+- case_150150151_7:
     run: ./part2
     script:
       - expect: "Enter cards:"
@@ -145,7 +145,7 @@
       - send: "11"
       - expect: "Score: 4"
       - expect: _EOF_
-- case_8:
+- case_150150151_8:
     run: ./part2
     script:
       - expect: "Enter cards:"
@@ -171,7 +171,7 @@
       - expect: "part2: card not in list"
       - expect: _EOF_
     exit: 1
-- case_9:
+- case_150150151_9:
     run: ./part2
     script:
       - expect: "Enter cards:"
@@ -185,7 +185,7 @@
       - send: "48"
       - expect: "Score: 19"
       - expect: _EOF_
-- case_10:
+- case_150150151_10:
     run: ./part2
     script:
       - expect: "Enter cards:"
